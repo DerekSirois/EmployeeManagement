@@ -1,6 +1,8 @@
-﻿namespace EmployeeManagement.Models.Entities
+﻿using EmployeeManagement.Models.Entities;
+
+namespace EmployeeManagement.Models.DTOs
 {
-    public class Employee
+    public class EmployeeDto
     {
         public Guid Id { get; set; }
         public DateTime CreatedAt { get; set; }
@@ -15,6 +17,6 @@
         public bool Active { get; set; }
         public string SIN { get; set; }
         public Guid DepartmentId { get; set; }
-        public Department Department { get; set; } = null!;
+        public DepartmentDto Department { get; set; } = null!;
     }
 }
