@@ -6,3 +6,5 @@
 /EmployeeManagement/obj
 /EmployeeManagementDB/bin/Debug
 /EmployeeManagementDB/obj/Debug
+/EmployeeManagementDB/EmployeeManagementDB.dbmdl
+*.jfm
