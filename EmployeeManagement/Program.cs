@@ -1,3 +1,6 @@
+using EmployeeManagement.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace EmployeeManagement
 {
     public class Program
@@ -9,6 +12,8 @@ namespace EmployeeManagement
             // Add services to the container.
 
             builder.Services.AddControllers();
+
+            builder.Services.AddDbContext<EmployeeDbContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("cs")));
 
             var app = builder.Build();
 
