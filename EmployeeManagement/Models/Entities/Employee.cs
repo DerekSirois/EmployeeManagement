@@ -10,8 +10,8 @@
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
         public string EmployeeNumber { get; set; }
-        public DateOnly Birthday { get; set; }
-        public DateOnly StartDate { get; set; }
+        public DateTime Birthday { get; set; }
+        public DateTime StartDate { get; set; }
         public bool Active { get; set; }
         public string SIN { get; set; }
         public Guid DepartmentId { get; set; }

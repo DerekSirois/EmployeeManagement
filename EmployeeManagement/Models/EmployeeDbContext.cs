@@ -6,8 +6,13 @@ namespace EmployeeManagement.Models
 {
     public class EmployeeDbContext : DbContext
     {
-        public DbSet<Department> Departments { get; set; }
+        public DbSet<Department> Department { get; set; }
         public DbSet<Employee> Employees { get; set; }
+
+        public EmployeeDbContext(DbContextOptions options) : base(options)
+        {
+
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

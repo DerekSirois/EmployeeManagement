@@ -13,12 +13,12 @@ namespace EmployeeManagement.Repositories
 
         public List<Department> GetAll()
         {
-            return _context.Departments.ToList();
+            return _context.Department.ToList();
         }
 
         public Department? GetById(Guid id)
         {
-            return _context.Departments.Where(d => d.Id == id).FirstOrDefault();
+            return _context.Department.Where(d => d.Id == id).FirstOrDefault();
         }
     }
 }

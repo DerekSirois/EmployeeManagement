@@ -14,8 +14,6 @@ namespace EmployeeManagement
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
-
             builder.Services.AddDbContext<EmployeeDbContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("cs")));
 
             builder.Services.AddAutoMapper(typeof(Program).Assembly);
@@ -24,6 +22,8 @@ namespace EmployeeManagement
             builder.Services.AddTransient<IDepartmentRepository, DepartmentRepository>();
             builder.Services.AddTransient<IDepartmentService, DepartmentService>();
             builder.Services.AddTransient<IEmployeeService, EmployeeService>();
+
+            builder.Services.AddControllers();
 
             var app = builder.Build();
 
